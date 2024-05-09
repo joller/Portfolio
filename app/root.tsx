@@ -17,6 +17,7 @@ import {
 
 import { getUser } from "~/session.server";
 import stylesheet from "~/tailwind.css";
+import { Logo } from "./components/Logo";
 
 export const links: LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -49,22 +50,30 @@ export default function App() {
         <Links />
       </head>
       <body className="h-full font-inter">
-        <nav>
-          <ul className="flex flex-row justify-around py-4 px-2">
+        <nav className="bg-amber-950/5 z-50 sticky top-0">
+          <ul className="flex flex-row justify-between py-4 px-20 ">
             <li>
               <NavLink to="/" className="text-xl font-bold">
-                Jason Oller
+                <Logo className="w-40 text-orange-600" />
               </NavLink>
             </li>
-            <li>
-              <NavLink to="/experience">Work Experience</NavLink>
-            </li>
-            <li>
-              <NavLink to="/resume">Resume</NavLink>
-            </li>
-            <li>
-              <NavLink to="/contact">Contact</NavLink>
-            </li>
+            <div className="flex">
+              <li>
+                <NavLink to="/experience" className="text-orange-800">
+                  Work Experience
+                </NavLink>
+              </li>
+              <li className="px-10">
+                <NavLink to="/about" className="text-orange-800">
+                  About Me
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/contact" className="text-orange-800">
+                  Contact
+                </NavLink>
+              </li>
+            </div>
           </ul>
         </nav>
         <main>

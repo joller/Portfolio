@@ -3,10 +3,10 @@ import { Outlet } from "@remix-run/react";
 
 export const meta: MetaFunction = () => [{ title: "Jason Oller | Resume" }];
 
-export default function Resume() {
+export default function about() {
   return (
     <div>
-      <h1>Resume</h1>
+      <h1>About Me</h1>
       <Outlet />
     </div>
   );

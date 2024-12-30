@@ -7,7 +7,7 @@ import { useOptionalUser } from "~/utils";
 export default function Index() {
   const user = useOptionalUser();
   return (
-    <main className="relative min-h-screen bg-[#F9E8D9] sm:flex sm:items-center sm:justify-center -top-20 ">
+    <main className="relative min-h-screen bg-[#002024] sm:flex sm:items-center sm:justify-center -top-20 ">
       <div className="relative">
         <div className="mx-auto">
           <div className="relative shadow-xl sm:overflow-hidden sm:rounded-2xl">
@@ -33,13 +33,13 @@ export default function Index() {
                   <div className="space-y-4 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5 sm:space-y-0">
                     <Link
                       to="/join"
-                      className="flex items-center justify-center rounded-md border border-transparent bg-white px-4 py-3 text-base font-medium text-yellow-700 shadow-sm hover:bg-yellow-50 sm:px-8"
+                      className="flex items-center justify-center rounded-md border   px-4 py-3 border-[#7DFF3C] text-base font-medium  text-[#7DFF3C] shadow-sm hover:bg-yellow-50 sm:px-8"
                     >
                       Sign up
                     </Link>
                     <Link
                       to="/login"
-                      className="flex items-center justify-center rounded-md bg-yellow-500 px-4 py-3 font-medium text-white hover:bg-yellow-600"
+                      className="flex items-center justify-center rounded-md bg-[#7DFF3C] px-4 py-3 font-medium text-[#002024] hover:bg-[#7dff3c75]"
                     >
                       Log In
                     </Link>
@@ -50,7 +50,7 @@ export default function Index() {
           </div>
         </div>
 
-        <div className="mx-auto max-w-7xl px-4 py-2 sm:px-6 lg:px-8">
+        {/* <div className="mx-auto max-w-7xl px-4 py-2 sm:px-6 lg:px-8">
           <h3 className="text-center my-10 text-3xl">Built With</h3>
           <div className="mt-6 flex flex-wrap justify-center gap-8">
             {[
@@ -119,7 +119,7 @@ export default function Index() {
               </a>
             ))}
           </div>
-        </div>
+        </div> */}
       </div>
     </main>
   );

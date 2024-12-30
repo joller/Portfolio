@@ -1,5 +1,5 @@
 import { ActionFunctionArgs, type MetaFunction } from "@remix-run/node";
-import { Form, json } from "@remix-run/react";
+import { Form, json, useActionData } from "@remix-run/react";
 
 export const meta: MetaFunction = () => [{ title: "We have contact" }];
 export const action = async ({ request }: ActionFunctionArgs) => {
@@ -46,9 +46,13 @@ export const action = async ({ request }: ActionFunctionArgs) => {
       { status: 400 },
     );
   }
+  console.log(formData);
+  return "Submitted";
+  // await createContactMessage({name, email, message} as ContactMessage);
 };
 
 export default function Contact() {
+  const actionData = useActionData<typeof action>();
   return (
     <div>
       <h1>Contact</h1>
@@ -56,10 +60,25 @@ export default function Contact() {
       <Form method="post">
         <label htmlFor="name">name</label>
         <input id="name" type="text" placeholder="Name" name="name" />
+        {actionData?.errors?.name ? (
+          <div>
+            <p>{actionData.errors.name}</p>
+          </div>
+        ) : null}
         <label htmlFor="email">Email</label>
         <input type="email" id="email" placeholder="Email" name="email" />
+        {actionData?.errors.email ? (
+          <div>
+            <p>{actionData.errors.email}</p>
+          </div>
+        ) : null}
         <label htmlFor="message">Message</label>
         <input type="text" placeholder="message" name="message" />
+        {actionData?.errors?.message ? (
+          <div>
+            <p>{actionData.errors.message}</p>
+          </div>
+        ) : null}
         <button type="submit">Send</button>
       </Form>
     </div>

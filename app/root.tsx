@@ -54,22 +54,22 @@ export default function App() {
           <ul className="flex flex-row justify-between py-4 px-20 ">
             <li>
               <NavLink to="/" className="text-xl font-bold">
-                <Logo className="w-40 text-orange-600" />
+                <Logo className="w-40 text-white" />
               </NavLink>
             </li>
             <div className="flex">
               <li>
-                <NavLink to="/experience" className="text-orange-800">
+                <NavLink to="/experience" className="text-white">
                   Work Experience
                 </NavLink>
               </li>
               <li className="px-10">
-                <NavLink to="/about" className="text-orange-800">
+                <NavLink to="/about" className="text-white">
                   About Me
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/contact" className="text-orange-800">
+                <NavLink to="/contact" className="text-white">
                   Contact
                 </NavLink>
               </li>

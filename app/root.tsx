@@ -49,8 +49,8 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body className="h-full font-inter">
-        <nav className="bg-amber-950/5 z-50 sticky top-0">
+      <body className="h-full font-inter bg-[#002024]">
+        <nav className="bg-[#002024] z-50 sticky top-0">
           <ul className="flex flex-row justify-between py-4 px-20 ">
             <li>
               <NavLink to="/" className="text-xl font-bold">
